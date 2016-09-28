@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://domain.shape.calc.eli.com/" 
+	xmlns:tns="http://domain.shape.calc.eli.com/" 
+	xmlns:model="http://model.shape.calc.eli.com/" 
+	elementFormDefault="qualified"
+	>
+
+	<xsd:import namespace="http://model.shape.calc.eli.com/" schemaLocation="./ShapeCalcModel.xsd" />
+
+	<xsd:complexType name="CalculationRequest">
+		<xsd:sequence>
+			<xsd:element minOccurs="1" maxOccurs="1" name="shapeName" type="model:ShapeName" />
+			<xsd:element minOccurs="1" maxOccurs="1" name="calcType" type="model:CalcType" />
+			<xsd:element minOccurs="1" maxOccurs="1" name="dimension" type="xsd:double" />
+		</xsd:sequence>
+	</xsd:complexType>
+
+</xsd:schema>
